@@ -15,7 +15,7 @@ let timer = null;
 let seconds = 0;
 let gameStarted = false;
 
-// Простой генератор звуков (Web Audio API) без сторонних mp3 файлов
+
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 function playSound(freq, type = 'sine', duration = 0.15) {
@@ -34,7 +34,7 @@ function playSound(freq, type = 'sine', duration = 0.15) {
     osc.stop(audioCtx.currentTime + duration);
 }
 
-// Запуск таймера
+
 function startTimer() {
     if (gameStarted) return;
     gameStarted = true;
@@ -50,7 +50,6 @@ function stopTimer() {
     clearInterval(timer);
 }
 
-// Переворот карты
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 function flipCard() {
@@ -121,7 +120,6 @@ function shuffle() {
     });
 }
 
-// Победа и расчет звезд
 function showWinModal() {
     playSound(800, 'sine', 0.4); // Победный аккорд
     
@@ -140,7 +138,7 @@ function showWinModal() {
     winModal.style.display = 'flex';
 }
 
-// Функция Сброса всей игры
+
 function initGame() {
     winModal.style.display = 'none';
     matchedPairs = 0;
