@@ -19,7 +19,7 @@ body {
     gap: 20px;
 }
 
-/* Верхняя панель результатов */
+
 .stats-bar {
     display: flex;
     align-items: center;
@@ -59,16 +59,16 @@ body {
     transform: rotate(180deg);
 }
 
-/* Игровое поле */
+
 #line {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     max-width: 465px;
-    perspective: 1000px; /* 3D Глубина */
+    perspective: 1000px; 
 }
 
-/* Карточки и 3D-переворот */
+
 .block {
     width: 100px;
     height: 100px;
@@ -119,7 +119,7 @@ body {
     object-fit: contain;
 }
 
-/* Модальное окно */
+
 .modal {
     display: none;
     position: fixed;
