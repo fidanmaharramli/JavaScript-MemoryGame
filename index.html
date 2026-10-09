@@ -3,98 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wordwall</title>
+    <title>Wordwall Memory Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="line">
-    
-        <div class="block" data-card="hamster">
-            <div class="back">?</div>
-            <div class="front"><img src="https://static.vecteezy.com/system/resources/thumbnails/073/050/755/small_2x/surprised-cartoon-hamster-with-wide-eyes-and-open-mouth-cute-animal-free-png.png" alt="xomyak"></div>
+
+    <div class="game-container">
+        <!-- Верхняя панель статистики -->
+        <div class="stats-bar">
+            <div class="stat-box">
+                <span class="label">Ходы:</span>
+                <span id="moves-count" class="value">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">Время:</span>
+                <span id="timer" class="value">00:00</span>
+            </div>
+            <button id="reset-game-btn" class="icon-btn" title="Перезапустить">🔄</button>
         </div>
-        <div class="block" data-card="hamster">
-            <div class="back">?</div>
-            <div class="front"><img src="https://static.vecteezy.com/system/resources/thumbnails/073/050/755/small_2x/surprised-cartoon-hamster-with-wide-eyes-and-open-mouth-cute-animal-free-png.png" alt="xomyak"></div>
-        </div>
-        
-    
-        <div class="block" data-card="bunny">
-            <div class="back">?</div>
-            <div class="front"><img src="https://www.nicepng.com/png/full/390-3902411_rabbit-vector-rabbit-clipart-cute-clipart-bunny-images.png" alt="zaycik"></div>
-        </div>
-        <div class="block" data-card="bunny">
-            <div class="back">?</div>
-            <div class="front"><img src="https://www.nicepng.com/png/full/390-3902411_rabbit-vector-rabbit-clipart-cute-clipart-bunny-images.png" alt="zaycik"></div>
-        </div>
-        
-        <div class="block" data-card="kitty">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHLmPVf2piWEo2a3BGnsNpAVp6s79JqFzvwpWRVpo2fQ&s=10" alt="hellokitty"></div>
-        </div>
-        <div class="block" data-card="kitty">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHLmPVf2piWEo2a3BGnsNpAVp6s79JqFzvwpWRVpo2fQ&s=10" alt="hellokitty"></div>
-        </div>
-        
-        
-        <div class="block" data-card="chick">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTosVmUUTQ-2jhg8JJ5q34u4MWXjyfZJOjRGn0ndT-RxRuAvXsY2enL2rLW&s=10" alt="cuce"></div>
-        </div>
-        <div class="block" data-card="chick">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTosVmUUTQ-2jhg8JJ5q34u4MWXjyfZJOjRGn0ndT-RxRuAvXsY2enL2rLW&s=10" alt="cuce"></div>
-        </div>
-       
-        
-        <div class="block" data-card="penguin">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU31r9-f92HKHK6W455S6AW0X078InICwvg2V4V69HZQ&s=10" alt="pinqvin"></div>
-        </div>
-        <div class="block" data-card="penguin">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU31r9-f92HKHK6W455S6AW0X078InICwvg2V4V69HZQ&s=10" alt="pinqvin"></div>
-        </div>
-       
-        
-        <div class="block" data-card="jasmine">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6T8AP6HJLK2SX2WZBr8189_cqknDwmDhpHE6g4zie6w&s=10" alt="jasmine"></div>
-        </div>
-        <div class="block" data-card="jasmine">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6T8AP6HJLK2SX2WZBr8189_cqknDwmDhpHE6g4zie6w&s=10" alt="jasmine"></div>
-        </div>
-        
-      
-        <div class="block" data-card="belle">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01WUk5OvB2YfOVV9ZSJO-6_EScifZEUoVRMmlHvIClA&s=10" alt="belle"></div>
-        </div>
-        <div class="block" data-card="belle">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01WUk5OvB2YfOVV9ZSJO-6_EScifZEUoVRMmlHvIClA&s=10" alt="belle"></div>
-        </div>
-        
-       
-        <div class="block" data-card="rapunzel">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa6wh12dFvkUhmYSifjedws8FRD8e6KR20zBt_km_8zA&s=10" alt="rapunzel"></div>
-        </div>
-        <div class="block" data-card="rapunzel">
-            <div class="back">?</div>
-            <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa6wh12dFvkUhmYSifjedws8FRD8e6KR20zBt_km_8zA&s=10" alt="rapunzel"></div>
-        </div>
-    </section>
+
+        <!-- Игровое поле -->
+        <section id="line">
+            <div class="block" data-card="hamster">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://static.vecteezy.com/system/resources/thumbnails/073/050/755/small_2x/surprised-cartoon-hamster-with-wide-eyes-and-open-mouth-cute-animal-free-png.png" alt="hamster"></div>
+                </div>
+            </div>
+            <div class="block" data-card="hamster">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://static.vecteezy.com/system/resources/thumbnails/073/050/755/small_2x/surprised-cartoon-hamster-with-wide-eyes-and-open-mouth-cute-animal-free-png.png" alt="hamster"></div>
+                </div>
+            </div>
+
+            <div class="block" data-card="bunny">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://www.nicepng.com/png/full/390-3902411_rabbit-vector-rabbit-clipart-cute-clipart-bunny-images.png" alt="bunny"></div>
+                </div>
+            </div>
+            <div class="block" data-card="bunny">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://www.nicepng.com/png/full/390-3902411_rabbit-vector-rabbit-clipart-cute-clipart-bunny-images.png" alt="bunny"></div>
+                </div>
+            </div>
+
+            <div class="block" data-card="kitty">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHLmPVf2piWEo2a3BGnsNpAVp6s79JqFzvwpWRVpo2fQ&s=10" alt="kitty"></div>
+                </div>
+            </div>
+            <div class="block" data-card="kitty">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHLmPVf2piWEo2a3BGnsNpAVp6s79JqFzvwpWRVpo2fQ&s=10" alt="kitty"></div>
+                </div>
+            </div>
+
+            <div class="block" data-card="chick">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTosVmUUTQ-2jhg8JJ5q34u4MWXjyfZJOjRGn0ndT-RxRuAvXsY2enL2rLW&s=10" alt="chick"></div>
+                </div>
+            </div>
+            <div class="block" data-card="chick">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTosVmUUTQ-2jhg8JJ5q34u4MWXjyfZJOjRGn0ndT-RxRuAvXsY2enL2rLW&s=10" alt="chick"></div>
+                </div>
+            </div>
+
+            <div class="block" data-card="penguin">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU31r9-f92HKHK6W455S6AW0X078InICwvg2V4V69HZQ&s=10" alt="penguin"></div>
+                </div>
+            </div>
+            <div class="block" data-card="penguin">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU31r9-f92HKHK6W455S6AW0X078InICwvg2V4V69HZQ&s=10" alt="penguin"></div>
+                </div>
+            </div>
+
+            <div class="block" data-card="jasmine">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6T8AP6HJLK2SX2WZBr8189_cqknDwmDhpHE6g4zie6w&s=10" alt="jasmine"></div>
+                </div>
+            </div>
+            <div class="block" data-card="jasmine">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6T8AP6HJLK2SX2WZBr8189_cqknDwmDhpHE6g4zie6w&s=10" alt="jasmine"></div>
+                </div>
+            </div>
+
+            <div class="block" data-card="belle">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01WUk5OvB2YfOVV9ZSJO-6_EScifZEUoVRMmlHvIClA&s=10" alt="belle"></div>
+                </div>
+            </div>
+            <div class="block" data-card="belle">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT01WUk5OvB2YfOVV9ZSJO-6_EScifZEUoVRMmlHvIClA&s=10" alt="belle"></div>
+                </div>
+            </div>
+
+            <div class="block" data-card="rapunzel">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa6wh12dFvkUhmYSifjedws8FRD8e6KR20zBt_km_8zA&s=10" alt="rapunzel"></div>
+                </div>
+            </div>
+            <div class="block" data-card="rapunzel">
+                <div class="card-inner">
+                    <div class="back">?</div>
+                    <div class="front"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa6wh12dFvkUhmYSifjedws8FRD8e6KR20zBt_km_8zA&s=10" alt="rapunzel"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Модальное окно победы с результатами -->
     <div id="win-modal" class="modal">
-                <div class="modal-content">
-                    <h2>Поздравляем! 🎉</h2>
-                    <p>Вы нашли все пары и победили!</p>
-                    <button id="restart-btn">Играть снова</button>
+        <div class="modal-content">
+            <h2>Победа! 🎉</h2>
+            <div class="rating-stars" id="final-stars">⭐⭐⭐</div>
+            <p>Вы нашли все пары!</p>
+            <div class="modal-stats">
+                <p>⏱️ Время: <strong id="final-time">00:00</strong></p>
+                <p>🎯 Ходы: <strong id="final-moves">0</strong></p>
             </div>
-            </div>
-    <script src="script.js"></script> 
+            <button id="restart-btn">Играть снова</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
